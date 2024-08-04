@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .nav-padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .nav-padding-y {
+    @apply sm:py-10 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+
+  .empty-text {
+    @apply font-palanquin text-slate-gray text-lg leading-7;
+  }
+
+  /* .head-text {
+    @apply text-2xl lg:text-3xl xl:text-4xl text-left font-montserrat font-semibold;
+  } */
+
+  .head-text {
+    @apply text-xl lg:text-2xl xl:text-3xl text-left font-montserrat font-semibold;
+  }
+
+  .sub-text {
+    @apply info-text;
+  }
+
+  .no-focus {
+    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full info-text leading-normal text-slate-gray sm:p-1 outline-none border-none border max-sm:rounded-full;
+  }
+}

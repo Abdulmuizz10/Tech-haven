@@ -32,19 +32,13 @@ const Navbar = ({ cartProducts }) => {
       }`}
     >
       <div className="container flex items-center justify-between relative">
-        {cartProducts.length > 0 ? (
-          <Link to="/" className="text-2xl">
-            <h1>Tech H.</h1>
-          </Link>
-        ) : (
-          <Link to="/" className="flex items-center justify-center">
-            <img
-              src={logo}
-              alt="logo"
-              className="max-md:w-[100px] max-md:h-[100px]"
-            />
-          </Link>
-        )}
+        <Link to="/" className="flex items-center justify-center">
+          <img
+            src={logo}
+            alt="logo"
+            className="max-md:w-[100px] max-md:h-[100px]"
+          />
+        </Link>
 
         <nav className="flex items-center gap-5 ">
           {Links.map((link, index) => (
